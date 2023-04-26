@@ -102,10 +102,11 @@ int main(void)
 	{
 		if (fgets(input, 150, stdin) == NULL)
 			exit(0);
+
 		input[strcspn(input, "\n")] = 0;
 
 		if (strcmp(input, "exit") == 0)
-			exit(0);
+			break;
 		else if (strcmp(input, "env") == 0)
 		{
 			print_environment();
