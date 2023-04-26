@@ -100,12 +100,8 @@ int main(void)
 
 	while (1)
 	{
-		printf("$ ");
 		if (fgets(input, 150, stdin) == NULL)
-		{
-			printf("\n");
 			exit(0);
-		}
 		input[strcspn(input, "\n")] = 0;
 
 		if (strcmp(input, "exit") == 0)
